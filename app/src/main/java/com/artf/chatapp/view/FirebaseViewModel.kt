@@ -21,8 +21,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class FirebaseViewModel(val firebaseRepository: FirebaseRepository) : ViewModel() {
+class FirebaseViewModel @Inject constructor(val firebaseRepository: FirebaseRepository) : ViewModel() {
 
     private var viewModelJob = Job()
     private val uiScope = CoroutineScope(viewModelJob + Dispatchers.Main)

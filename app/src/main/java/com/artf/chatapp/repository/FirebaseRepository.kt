@@ -23,8 +23,9 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import java.io.File
+import javax.inject.Inject
 
-class FirebaseRepository {
+class FirebaseRepository @Inject constructor() {
 
     companion object {
         const val RC_SIGN_IN = 1
